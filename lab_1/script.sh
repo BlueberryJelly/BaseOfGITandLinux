@@ -42,9 +42,26 @@ echo "======================================"
 
 echo "======================================"
 echo "Subtask 3"
+awk -F',' '
+{
+    n = split($3, themes, /\+/)
+    has_cs = has_se = has_rb = 0
+
+    for (i = 1; i <= n; i++) {
+        gsub(/^[ \t]+/, "", themes[i])
+        gsub(/[ \t]+$/, "", themes[i])
+
+        if (themes[i] == "Computer Systems") has_cs = 1
+        if (themes[i] == "Space Engineering") has_se = 1
+        if (themes[i] == "Robotics") has_rb = 1
+    }
+
+    if (has_cs && has_se && has_rb) print $0
+}' "$INPUT" > "$OUT/joined.csv"
+
+cat "$OUT/joined.csv"
 echo "Subtask 3 was completed"
 echo "======================================"
-
 
 echo "======================================"
 echo "Subtask 4"

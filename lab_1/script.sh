@@ -1,32 +1,30 @@
-#! /bin/bash
+#!/bin/bash
+
+INPUT="faculty_5.csv"
+OUT="data_analysis"
 
 echo "Task 2"
-
 echo "======================================"
 echo "Subtask 0"
-mkdir -p data_analysis
-ls -d data_analysis
+mkdir -p "$OUT"
+ls -d "$OUT"
 echo "Subtask 0 was completed"
 echo "======================================"
 
-
 echo "======================================"
 echo "Subtask 1"
-if [ -f 'data_analysis/research_themes.csv' ]; then
-    rm -f data_analysis/research_themes.csv
-fi
-cut -d',' -f3 < faculty_5.csv \
-| tr -s '+' '\n' \
-| sed 's/^[[:space:]]*//; s/[[:space:]]*$//' \
-| sort | uniq -c | sort -k2,2\
-| awk '{ c=$1; $1=""; sub(/^[[:space:]]*/, ""); print c "," $0; count++ } END { print "," count+0 }' \
->> data_analysis/research_themes.csv
+cut -d',' -f3 "$INPUT" \
+  | tr -s '+' '\n' \
+  | sed 's/^[[:space:]]*//; s/[[:space:]]*$//' \
+  | sed '/^$/d' \
+  | sort -u > "$OUT/research_themes.txt"
 
-cut -d"," -f2 < data_analysis/research_themes.csv \
-| awk '{ print $0}'
+count=$(wc -l < "$OUT/research_themes.txt")
+echo "$count" >> "$OUT/research_themes.txt"
+
+cat "$OUT/research_themes.txt"
 echo "Subtask 1 was completed"
 echo "======================================"
-
 
 echo "======================================"
 echo "Subtask 2"

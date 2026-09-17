@@ -65,5 +65,14 @@ echo "======================================"
 
 echo "======================================"
 echo "Subtask 4"
+cut -d',' -f1 "$INPUT" \
+  | sed 's/^[[:space:]]*//; s/[[:space:]]*$//' \
+  | sed '/^$/d' \
+  | sort > "$OUT/sorted_names.txt"
+
+count=$(wc -l < "$OUT/sorted_names.txt")
+echo "$count" >> "$OUT/sorted_names.txt"
+
+cat "$OUT/sorted_names.txt"
 echo "Subtask 4 was completed"
 echo "======================================"

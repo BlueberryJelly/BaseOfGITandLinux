@@ -20,8 +20,7 @@ cut -d',' -f3 "$INPUT" \
   | sed '/^$/d' \
   | sort -u > "$OUT/research_themes.txt"
 
-count=$(wc -l < "$OUT/research_themes.txt")
-echo "$count" >> "$OUT/research_themes.txt"
+wc -l < "$OUT/research_themes.txt" >> "$OUT/research_themes.txt"
 
 cat "$OUT/research_themes.txt"
 echo "Subtask 1 was completed"

@@ -55,7 +55,8 @@ echo "======================================"
 echo "======================================"
 echo "Subtask 4"
 cut -d',' -f1 "$INPUT" \
-  | sed 's/^[[:space:]]*//; s/[[:space:]]*$//' \
+  | sed 's/^[[:space:]]*//' \
+  | sed 's/[[:space:]]*$//' \
   | sed '/^$/d' \
   | sort > "$OUT/sorted_names.txt"
 

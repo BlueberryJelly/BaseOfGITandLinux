@@ -15,7 +15,8 @@ echo "======================================"
 echo "Subtask 1"
 cut -d',' -f3 "$INPUT" \
   | tr -s '+' '\n' \
-  | sed 's/^[[:space:]]*//; s/[[:space:]]*$//' \
+  | sed 's/^[[:space:]]*//' \
+  | sed 's/[[:space:]]*$//' \
   | sed '/^$/d' \
   | sort -u > "$OUT/research_themes.txt"
 

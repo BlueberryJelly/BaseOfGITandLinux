@@ -31,7 +31,8 @@ echo "======================================"
 echo "Subtask 2"
 cut -d',' -f3 "$INPUT" \
   | tr -s '+' '\n' \
-  | sed 's/^[[:space:]]*//; s/[[:space:]]*$//' \
+  | sed 's/^[[:space:]]*//' \
+  | sed 's/[[:space:]]*$//' \
   | sed '/^$/d' \
   | sort | uniq -c \
   | awk '$1 < 7 { sub(/^[[:space:]]*[0-9]+[[:space:]]+/, ""); print }' \

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 INPUT="faculty_5.csv"
 OUT="data_analysis"

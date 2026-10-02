@@ -35,5 +35,5 @@ tr -s '[:space:]' '\n' < dictionary_2026.txt \
 tr -s '[:space:]' '\n' < dictionary_2026.txt \
 | grep 'ee' | grep -E '^[A-Z]{1}[^[:digit:]]{2}' | cut -c1-3 \
 | sort | uniq -c | sort -rn \
-| head -n 4 | sort -k2,2 | awk '{print $2}'
+| head -n 4 | sort -k2 | awk '{print $2}'
 ```

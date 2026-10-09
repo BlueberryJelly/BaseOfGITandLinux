@@ -25,3 +25,13 @@ echo 'MY_SHELL_VAR="shell_var_value"' >> ~/.bashrc
 ```bash
 echo $MY_SHELL_VAR
 ```
+
+## Подзадача 4
+Используя файл environment в /etc/environment создайте глобальную переменную  MY_GLOBAL_VAR со значением "global_var_value". Проверьте ее доступность в новом окне  терминала. Выполните команду python3 -c 'import os; print(os.getenv("MY_GLOBAL_VAR"))' и  убедитесь, что вы получили значение переменной.
+```bash
+sudo sh -c 'echo MY_GLOBAL_VAR=global_var_value >> /etc/environment'
+```
+В новом окне.
+```bash
+python3 -c 'import os; print(os.getenv("MY_GLOBAL_VAR"))'
+```

@@ -43,3 +43,12 @@ python3 -c 'import os; print(os.getenv("MY_GLOBAL_VAR"))'
 ```bash
 groups
 ```
+
+## Подзадание 2
+Создайте группу “new_group” с произвольным паролем, новую директорию и файл test_file.txt  внутри этой директории, содержащий произвольную информацию.
+```bash
+sudo groupadd new_group
+sudo gpasswd new_group
+mkdir -p ~/Documents/repos/BaseOfGITandLinux/lab_2/new_group_dir
+echo "123" > ~/Documents/repos/BaseOfGITandLinux/lab_2/new_group_dir/test_file.txt
+```

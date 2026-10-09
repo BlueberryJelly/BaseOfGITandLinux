@@ -15,3 +15,13 @@ MY_LOCAL_VAR="local_var_value"
 ```bash
 echo $MY_LOCAL_VAR
 ```
+
+## Подзадача 3
+Используя конфигурационный файл .bashrc создайте переменную оболочки с именем  MY_SHELL_VAR и значением равным “shell_var_value”. Убедитесь, что она доступна в любом окне терминала.
+```bash
+echo 'MY_SHELL_VAR="shell_var_value"' >> ~/.bashrc
+```
+В новом окне.
+```bash
+echo $MY_SHELL_VAR
+```

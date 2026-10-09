@@ -13,5 +13,5 @@ setenv MY_LOCAL_VAR "local_var_value"
 ```
 В новом окне.
 ```bash
-env | grep MY_LOCAL_VAR
+echo $MY_LOCAL_VAR
 ```

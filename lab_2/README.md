@@ -35,3 +35,11 @@ sudo sh -c 'echo MY_GLOBAL_VAR=global_var_value >> /etc/environment'
 ```bash
 python3 -c 'import os; print(os.getenv("MY_GLOBAL_VAR"))'
 ```
+
+# Задание 2
+
+## Подзадание 1
+Для текущего пользователя системы вывести все группы, в которых он состоит.
+```bash
+groups
+```

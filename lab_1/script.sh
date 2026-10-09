@@ -34,7 +34,7 @@ cut -d',' -f3 "$INPUT" \
   | sed 's/[[:space:]]*$//' \
   | sed '/^$/d' \
   | sort | uniq -c \
-  | awk '$1 < 7 { sub(/^[[:space:]]*[0-9]+[[:space:]]+/, ""); print }' "$OUT/small_groups.txt"
+  | awk '$1 < 7 { sub(/^[[:space:]]*[0-9]+[[:space:]]+/, ""); print }' > "$OUT/small_groups.txt"
 
 cat "$OUT/small_groups.txt"
 echo "Subtask 2 was completed"

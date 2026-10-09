@@ -9,7 +9,7 @@ set
 ## Подзадание 2
 Добавьте новую локальную переменную с именем MY_LOCAL_VAR и установите ее значение равным “local_var_value”. Откройте терминал в новом окне и проверьте наличие созданной  переменной.
 ```bash
-setenv MY_LOCAL_VAR "local_var_value"
+MY_LOCAL_VAR="local_var_value"
 ```
 В новом окне.
 ```bash

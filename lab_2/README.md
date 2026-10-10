@@ -60,3 +60,11 @@ chmod 770 new_group_dir/test_file.txt
 sudo chgrp new_group new_group_dir/test_file.txt
 sudo chown root new_group_dir/test_file.txt
 ```
+
+## Подзадание 4
+Попробуйте записать новую информацию в файл. Добавьте текущего пользователя в группу  new_group и добавьте в конец файла строку "User currently in the group".
+```bash
+echo "321" > new_group_dir/test_file.txt
+sudo usermod -aG new_group $USER
+echo "User currently in the group" >> new_group_dir/test_file.txt
+```

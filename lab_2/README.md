@@ -68,3 +68,13 @@ echo "321" > new_group_dir/test_file.txt
 sudo usermod -aG new_group $USER
 echo "User currently in the group" >> new_group_dir/test_file.txt
 ```
+
+# Задание 3
+
+## Подзадание 1
+Создайте символическую ссылку с именем tf на новый файл test_file.txt в любой директории  указанной в $PATH. Запретите чтение, запись и выполнение ссылки для группы и всех остальных  пользователей. Измените владельца файла на root. Проверьте, сохранился ли у вас доступ к файлу  по ссылке? Присутствует ли у вас доступ к файлу напрямую?
+```bash
+sudo ln -s "$PWD/new_group_dir/test_file.txt" /usr/local/bin/tf
+sudo chmod 700 /usr/local/bin/tf
+sudo chown root "$PWD/new_group_dir/test_file.txt"
+```

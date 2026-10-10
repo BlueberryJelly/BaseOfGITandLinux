@@ -49,6 +49,6 @@ groups
 ```bash
 sudo groupadd new_group
 sudo gpasswd new_group
-mkdir -p ~/Documents/repos/BaseOfGITandLinux/lab_2/new_group_dir
-echo "123" > ~/Documents/repos/BaseOfGITandLinux/lab_2/new_group_dir/test_file.txt
+mkdir -p new_group_dir
+echo "123" > new_group_dir/test_file.txt
 ```

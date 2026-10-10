@@ -16,7 +16,7 @@ MY_LOCAL_VAR="local_var_value"
 echo $MY_LOCAL_VAR
 ```
 
-## Подзадача 3
+## Подзадание 3
 Используя конфигурационный файл .bashrc создайте переменную оболочки с именем  MY_SHELL_VAR и значением равным “shell_var_value”. Убедитесь, что она доступна в любом окне терминала.
 ```bash
 echo 'MY_SHELL_VAR="shell_var_value"' >> ~/.bashrc
@@ -26,7 +26,7 @@ echo 'MY_SHELL_VAR="shell_var_value"' >> ~/.bashrc
 echo $MY_SHELL_VAR
 ```
 
-## Подзадача 4
+## Подзадание 4
 Используя файл environment в /etc/environment создайте глобальную переменную  MY_GLOBAL_VAR со значением "global_var_value". Проверьте ее доступность в новом окне  терминала. Выполните команду python3 -c 'import os; print(os.getenv("MY_GLOBAL_VAR"))' и  убедитесь, что вы получили значение переменной.
 ```bash
 sudo sh -c 'echo MY_GLOBAL_VAR=global_var_value >> /etc/environment'
@@ -97,4 +97,17 @@ jobs
 syncthing &
 kill -STOP %1
 fg %1
+```
+
+## Подзадание 2
+Используя tmux создайте две новые сессии. В первой выполните команду cat, а во второй echo "the second session". Подключитесь к первой сессии и остановите задачу cat. Отключитесь от  сессии и завершите ее. Закройте окно терминала. Открыв новое окно терминала подключитесь ко  второй сессии и выполните произвольную команду.
+```bash
+tmux new -s for_cat
+cat
+tmux new -s for_echo
+echo "the second session"
+tmux attach -t for_cat
+tmux kill-session -t for_cat
+tmux attach -t for_echo
+syncthing 
 ```

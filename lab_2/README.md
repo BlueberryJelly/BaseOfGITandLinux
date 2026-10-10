@@ -52,3 +52,11 @@ sudo gpasswd new_group
 mkdir -p new_group_dir
 echo "123" > new_group_dir/test_file.txt
 ```
+
+## Подзадание 3
+Запретите чтение, запись и исполнение файла test_file.txt для всех остальных пользователей.  Для данного файла измените закрепленную за ним группу пользователей на new_group, а  владельца файла на root.
+```bash
+chmod 770 new_group_dir/test_file.txt
+sudo chgrp new_group new_group_dir/test_file.txt
+sudo chown root new_group_dir/test_file.txt
+```

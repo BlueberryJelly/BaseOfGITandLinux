@@ -40,3 +40,11 @@ git checkout main
 git diff HEAD~1 HEAD
 git log
 ```
+
+# Задание 2
+
+## Подзадание 1
+Разделите ваш репозиторий на две ветки.
+```bash
+git branch test
+```

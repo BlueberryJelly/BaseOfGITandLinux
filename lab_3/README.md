@@ -48,3 +48,9 @@ git log
 ```bash
 git branch test
 ```
+
+## Подзадание 2
+Измените текущую ветку.
+```bash
+git switch test
+```

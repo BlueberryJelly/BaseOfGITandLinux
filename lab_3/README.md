@@ -16,3 +16,11 @@ touch text.txt
 git add text.txt
 git commit -m "feat: test file was added"
 ```
+
+## Подзадание 3
+Измените файл и выполните коммит внесенных изменений в репозиторий.
+```bash
+echo "Hello World" >> text.txt
+git add text.txt
+git commit -m "feat: test file was updated"
+```

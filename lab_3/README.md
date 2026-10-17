@@ -24,3 +24,11 @@ echo "Hello World" >> text.txt
 git add text.txt
 git commit -m "feat: test file was updated"
 ```
+
+## Подзадание 4
+Выполните откат изменений и вернитесь к предыдущему коммиту. Просмотрите файл и убедитесь, что перед вами его предыдущая версия.
+```bash
+git revert HEAD
+git checkout HEAD~2
+git diff HEAD main
+```

@@ -54,3 +54,16 @@ git branch test
 ```bash
 git switch test
 ```
+
+## Подзадание 3
+Измените файл и выполните коммит на каждой из веток.
+```bash
+echo "Hello World" >> text.txt
+git add text.txt
+git commit -m "feat: test file was updated"
+
+git switch main
+echo "Earth" >> text.txt
+git add text.txt
+git commit -m "feat: test file was updated"
+```

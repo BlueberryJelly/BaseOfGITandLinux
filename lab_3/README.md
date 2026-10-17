@@ -67,3 +67,17 @@ echo "Earth" >> text.txt
 git add text.txt
 git commit -m "feat: test file was updated"
 ```
+
+## Подзадание 4
+Выполните слияние двух веток.
+```bash
+git merge test
+git diff main test
+vim text.txt
+git add text.txt
+git commit -m "fix: conflicts were resolved"
+```
+
+## Подзадание 5
+Выполните разделы “Введение” и “Едем дальше” руководства по git на сайте:
+https://learngitbranching.js.org/?locale=ru_RU.

@@ -32,3 +32,11 @@ git revert HEAD
 git checkout HEAD~2
 git diff HEAD main
 ```
+
+## Подзадание 5
+Сравните две версии файла и изучите вашу историю коммитов.
+```bash
+git checkout main
+git diff HEAD~1 HEAD
+git log
+```

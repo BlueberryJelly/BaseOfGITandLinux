@@ -76,7 +76,7 @@ echo "User currently in the group" >> new_group_dir/test_file.txt
 ```bash
 sudo ln -s "$PWD/new_group_dir/test_file.txt" /usr/local/bin/tf
 sudo chmod 700 /usr/local/bin/tf
-sudo chown root "$PWD/new_group_dir/test_file.txt"
+sudo chown root "new_group_dir/test_file.txt"
 ```
 
 ## Подзадание 2
